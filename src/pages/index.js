@@ -1,3 +1,5 @@
+import { db } from "@/data/db"
+
 export default function Home({datos}) {
   return (
     <main>
@@ -7,11 +9,7 @@ export default function Home({datos}) {
 }
 
 export async function getStaticProps() {
-  // Hacer una solicitud a la API
-  const res = await fetch('http://localhost:3000/api/categories')
-  const datos = await res.json()
-
-  // Devolver los datos como props
+  const datos = db;
   return {
     props: {
       datos
