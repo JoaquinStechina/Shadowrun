@@ -14,10 +14,14 @@ export default function GridElement({dato}){
     return(
         <div key={dato.id} 
           onMouseMove={mouseMove}
-          className="sepia hue-rotate-180 border-sky-800 border-4 w-[150px] h-[200px] bg-[size:150%]" 
-          style={{backgroundImage:`url(${dato.imagen})`, backgroundPosition:`${backgroundPosition}`}}
+          className="border-4 border-[#133e7c] group rounded-lg w-[200px] h-[250px] relative" 
         >
-          <h2 className="text-center">{dato.nombre}</h2>
+          <div className="overflow-hidden saturate-50 transition-[opacity] duration-500 group-hover:opacity-80 w-full h-full bg-[size:150%]" 
+                style={{backgroundImage:`url(${dato.imagen})`, backgroundPosition:`${backgroundPosition}`}}
+          />
+          <div className="absolute group-hover:opacity-100 group-hover:backdrop-blur-sm border-2 border-[#711c91] rounded-lg transition-[opacity backdrop-filter] duration-500 group-hover:animate-[pink-flicker_1.7s_cubic-bezier(.52,0,.54,1)_infinite] opacity-0 w-4/5 h-4/5 right-[10%] top-[10%] text-center">
+            <h2 className="">{dato.nombre}</h2>
+          </div>
         </div>
       )
 }

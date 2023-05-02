@@ -5,4 +5,29 @@
 *{
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+
+@keyframes pink-flicker {
+  0%{
+    box-shadow: 0 0 0px #ea00d9;
+  }
+  50%{
+    box-shadow: 0 0 25px #ea00d9;
+  }
+  100%{
+    box-shadow: 0 0 0px #ea00d9;
+  }
+}
+
+@keyframes cyan-flicker {
+  0%{
+    box-shadow: 0 0 0px #0abdc6;
+  }
+  50%{
+    box-shadow: 0 0 25px #0abdc6;
+  }
+  100%{
+    box-shadow: 0 0 0px #0abdc6;
+  }
 }
