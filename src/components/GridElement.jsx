@@ -14,7 +14,7 @@ export default function GridElement({dato}){
     return(
         <div key={dato.id} 
           onMouseMove={mouseMove}
-          className="border-4 border-[#133e7c] group rounded-lg w-[200px] h-[250px] relative" 
+          className="border-4 border-[#133e7c] shadow-[0_0_8px_#0abdc6] group rounded-lg w-[200px] h-[250px] relative" 
         >
           <div className="overflow-hidden saturate-50 transition-[opacity] duration-500 group-hover:opacity-80 w-full h-full bg-[size:150%]" 
                 style={{backgroundImage:`url(${dato.imagen})`, backgroundPosition:`${backgroundPosition}`}}
