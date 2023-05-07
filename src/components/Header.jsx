@@ -1,5 +1,8 @@
 export default function Header(){
     return(
-        <div></div>
+        <nav>
+            <div>Home</div>
+            <div>Categories</div>
+        </nav>
     )
 }
