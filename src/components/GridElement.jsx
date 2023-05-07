@@ -8,7 +8,10 @@ export default function GridElement({dato}){
       const y = e.clientY;
       const newX = (x / window.innerWidth) * 100;
       const newY = (y / window.innerHeight) * 100;
-      setBackgroundPosition(`${newX}% ${newY}%`);
+
+      setTimeout(() => {
+        setBackgroundPosition(`${newX}% ${newY}%`);
+      }, 100);
     }
 
     return(
